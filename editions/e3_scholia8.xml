@@ -356,9 +356,7 @@
          </div>
          <div n="22" type="scholion">
             <div n="lemma">
-               <p><num value="3">Β</num><note resp="HMT">We would expect to see gamma, but
-                     there is a second beta, and the corresponding numbers in the lines do not
-                     repeat the beta, but go on to gamma</note></p>
+               <p><num value="3">Β</num></p>
             </div>
             <div n="ref">
                <p>urn:cts:greekLit:tlg0012.tlg001.e3:8.25@περιρρίον</p>
@@ -573,9 +571,7 @@
          </div>
          <div n="37" type="scholion">
             <div n="lemma">
-               <p><num value="14">ΙΔ</num><note resp="HMT">we have a repeat of the number 14
-                     from the previous folio, but the content of the scholia is
-                     different</note></p>
+               <p><num value="14">ΙΔ</num></p>
             </div>
             <div n="ref">
                <p>urn:cts:greekLit:tlg0012.tlg001.e3:8.47-8.48@Ἴδην</p>
@@ -1080,9 +1076,7 @@
          </div>
          <div n="69" type="scholion">
             <div n="lemma">
-               <p><num value="21">ΚΑ ΚΑ</num><note resp="HMT">There are two scholion numbers,
-                     one written in the interior margin and one written before the scholion
-                     text</note></p>
+               <p><num value="21">ΚΑ ΚΑ</num></p>
             </div>
             <div n="ref">
                <p>urn:cts:greekLit:tlg0012.tlg001.e3:8.115@ἀμφοτέρω</p>
