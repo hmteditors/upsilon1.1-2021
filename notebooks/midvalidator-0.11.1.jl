@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.14.6
+# v0.14.7
 
 using Markdown
 using InteractiveUtils
@@ -165,7 +165,7 @@ function catalogcheck(editorsrepo::EditingRepository)
 		
 		notondisk = citedonly(editorsrepo, cites)
 		if ! isempty(notondisk)
-			nofilelist = "<p>Configured files not found on disk: </p><ul>" * join(nofiletems, "\n") * "</ul>"
+			nofilelist = "<p>Configured files not found on disk: </p><ul>" * join(fileitems , "\n") * "</ul>"
 			hdr = "<div class='danger'><h1>🧨🧨 Configuration error 🧨🧨 </h1>" 
 			tail = "</div>"
 			nofilehtml = join([hdr, nofilelist, tail],"\n")
