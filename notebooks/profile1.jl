@@ -12,6 +12,10 @@ begin
 	using EditorsRepo
 	using CitableText
 	using DataFrames
+	using Orthography
+	
+	# NB-specific packages:
+	using PlutoUI
 	using Markdown
 	Pkg.status()
 end
@@ -21,9 +25,6 @@ md"# Profile texts in repository"
 
 # ╔═╡ 12df8620-117f-4a47-9b86-657749493c5b
 md"Vocabulary"
-
-# ╔═╡ 54d3fa84-fc29-4c65-a2b6-a7a99824d0a1
-
 
 # ╔═╡ 48e10b0d-f6b7-48e2-abde-e1761ebf8451
 md"""
@@ -44,6 +45,15 @@ md"> Data sets"
 
 # ╔═╡ 00a730c8-0e13-4f6a-8549-4221fc6d4074
 repo = EditingRepository(dirname(pwd()), "editions", "dse", "config")
+
+# ╔═╡ 54d3fa84-fc29-4c65-a2b6-a7a99824d0a1
+txturns = texturns(repo)
+
+# ╔═╡ d7347b73-979e-47cf-b02b-10eee7727164
+o = orthographyforurn(citation_df(repo), txturns[1])
+
+# ╔═╡ 7dde923a-37b5-4b49-9b06-86ee24b114e6
+tokenize(o, "μῆνιν#")
 
 # ╔═╡ 4db604cd-a028-4051-af80-a7333eb8241a
 function alltexts(er::EditingRepository)
@@ -87,12 +97,14 @@ end
 # ╟─6adb6004-bf8f-11eb-010b-cb3acba176b7
 # ╟─4f2e06cc-e20a-40a4-bf5f-cc812693d1ba
 # ╟─a87161a0-20ec-49fb-b7ba-2d0ece243358
-# ╠═12df8620-117f-4a47-9b86-657749493c5b
+# ╟─12df8620-117f-4a47-9b86-657749493c5b
 # ╠═54d3fa84-fc29-4c65-a2b6-a7a99824d0a1
+# ╠═d7347b73-979e-47cf-b02b-10eee7727164
+# ╠═7dde923a-37b5-4b49-9b06-86ee24b114e6
 # ╟─48e10b0d-f6b7-48e2-abde-e1761ebf8451
 # ╟─eafc4907-2fbb-4a06-a8fb-d0892bfaf538
 # ╟─00a730c8-0e13-4f6a-8549-4221fc6d4074
-# ╠═4db604cd-a028-4051-af80-a7333eb8241a
+# ╟─4db604cd-a028-4051-af80-a7333eb8241a
 # ╟─cc03ac4a-5079-4990-8fb6-f1d37469425a
 # ╟─fd760fb1-3b43-4d53-82d1-cb2af38f60a8
 # ╟─2ce77cff-44b6-4fce-961f-853064fb8ebd
