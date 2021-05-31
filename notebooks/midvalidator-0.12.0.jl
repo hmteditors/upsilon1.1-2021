@@ -31,6 +31,7 @@ begin
 	#using Lycian
 	using Markdown
 	using Orthography
+	using ManuscriptOrthography
 	using PolytonicGreek
 	Pkg.status()
 end
