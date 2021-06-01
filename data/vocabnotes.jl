@@ -31,3 +31,14 @@ tkns = map(cn -> tokenize(orth, cn.text), comments) |> Iterators.flatten |> coll
 lex = filter(t ->  t.tokencategory == LexicalToken(), tkns)
 avglen = length(lex) ÷ length(comments)
 tstrs = map(l -> l.text, lex)
+hist = sort(freqtable(tstrs); rev=true)
+
+function writefreqs(histo, outfile)
+    output = []
+    for n in names(histo)[1]
+        push!(output, string(n,"|", hist[n]))
+    end
+    open(outfile,"w")  do io
+        println(io, join(output, "\n"))
+    end
+end
