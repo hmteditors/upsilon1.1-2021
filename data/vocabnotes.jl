@@ -1,7 +1,7 @@
 # Use this script from the `data` directory, or else
 # modify the following line to point to the right directory
 # for the root of the repository:
-reporoot = pwd() |> dirname
+reporoot = pwd() 
 
 
 using EditorsRepo
