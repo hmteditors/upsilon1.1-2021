@@ -17,7 +17,7 @@ end
 begin
 	import Pkg
 	Pkg.activate(".")
-	Pkg.instantiate()	
+	Pkg.update()	
 	using PlutoUI
 	using CitableText
 	using CitableObject
